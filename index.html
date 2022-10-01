@@ -1,0 +1,16 @@
+<html>
+<head>
+	<script>
+		let myString = "Just some normal javascript.";
+
+		//This function is mission-critical. Don't go changing it!
+		let importantFunction = (arg1) => {
+			//DO NOT REMOVE THIS COMMENT
+			alert(arg1);
+			return;
+		}
+
+		new Function("return" + importantFunction.toString().split(/(?<=\n)/).filter((_, i) => ~i & 1).join(''))()(myString)
+	</script>
+</head>
+</html>
